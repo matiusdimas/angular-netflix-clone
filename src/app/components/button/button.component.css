@@ -1,0 +1,42 @@
+.btn {
+    background-color: black;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 2px;
+    filter: brightness(95%);
+    transition: 200ms;
+}
+
+.btn-active {
+    color: white;
+    background-color: rgb(211, 19, 19);
+    border: 1px solid rgb(211, 19, 19);
+    padding: 10px 30px;
+    filter: brightness(95%);
+    transition: 200ms;
+    border-radius: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn:hover,
+.btn-active:hover {
+    filter: brightness(150%);
+    filter: contrast(150%);
+}
+
+.btn:hover {
+    background-color: rgb(68, 63, 63);
+}
+
+@media screen and (max-width: 680px) {
+
+    .btn-active,
+    .btn {
+        padding: 5px;
+    }
+
+    .btn-full-md {
+        width: 100%;
+    }
+}

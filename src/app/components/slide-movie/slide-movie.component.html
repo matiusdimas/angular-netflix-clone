@@ -1,0 +1,19 @@
+<main>
+  <div>
+    <p class="title">{{ title }}</p>
+  </div>
+  <div class="slide">
+    <div class="btn-lt" (click)="leftBtn()" [hidden]="prevBtn">&lt;</div>
+    <div class="btn-gt" (click)="rightBtn()" [hidden]="nextBtn">&gt;</div>
+    <div class="slider" (scroll)="onScroll($event)" #slider>
+      <div class="card-slider" *ngFor="let movie of item">
+        <app-img-movie
+          [poster]="movie.Poster"
+          [height]="50"
+          [width]="30"
+        ></app-img-movie>
+        <p>{{ movie.Title }}</p>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,40 @@
+* {
+    color: rgb(103, 106, 110);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin: 80px 20px;
+}
+
+.div1 {
+    margin-bottom: 60px;
+}
+
+.div2 {
+    margin-bottom: 20px;
+}
+
+.div3 {
+    font-size: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    width: 80%;
+}
+
+.div4 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 680px) {
+    .div3 {
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+    }
+}

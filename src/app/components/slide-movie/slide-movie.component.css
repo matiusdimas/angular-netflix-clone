@@ -1,0 +1,66 @@
+* {
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: 0;
+    gap: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.title {
+    text-transform: capitalize;
+    font-size: 2vw;
+}
+
+.slide {
+    position: relative;
+}
+
+.btn-lt,
+.btn-gt {
+    color: red;
+    font-size: 115%;
+    position: absolute;
+    font-weight: bold;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-lt {
+    left: -25px;
+}
+
+.btn-gt {
+    right: -25px;
+}
+
+
+@media screen and (max-width: 680px) {
+
+    .btn-gt,
+    .btn-lt {
+        display: none;
+    }
+
+    .title {
+        font-size: 4vw;
+    }
+}

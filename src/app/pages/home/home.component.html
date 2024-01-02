@@ -1,0 +1,47 @@
+<main>
+  <app-navbar></app-navbar>
+  <section>
+    <div class="header">
+      <h1>Movies</h1>
+      <p>
+        Movies move us like nothing else can, whether they’re scary, funny,
+        dramatic, romantic or anywhere in-between. So many titles, so much to
+        experience.
+      </p>
+    </div>
+    <div *ngFor="let movie of type; let i = index">
+      <div class="slider">
+        <app-slide-movie
+          [item]="filterMovie(movie)"
+          [title]="movie"
+        ></app-slide-movie>
+      </div>
+    </div>
+    <div class="blur">
+      <div class="overlay"></div>
+      <div *ngFor="let movie of type; let i = index">
+        <div class="slider">
+          <app-slide-movie
+            [item]="filterMovie(movie)"
+            [title]="movie"
+          ></app-slide-movie>
+        </div>
+      </div>
+    </div>
+    <div class="more">
+      <h1>There’s even more to watch.</h1>
+      <p>
+        Netflix has an extensive library of feature films, documentaries, TV
+        shows, anime, award-winning Netflix originals, and more. Watch as much
+        as you want, anytime you want.
+      </p>
+      <app-button
+        style="width: 100%"
+        [class]="'btn-active btn-full-md'"
+        [title]="'JOIN NOW'"
+        [fs]="20"
+      ></app-button>
+    </div>
+    <app-footer style="width: 100%"></app-footer>
+  </section>
+</main>

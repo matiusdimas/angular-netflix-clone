@@ -1,0 +1,83 @@
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 40px;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+.header {
+    width: 50%;
+    align-self: self-start;
+    color: white;
+    display: grid;
+    gap: 10px;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.header p {
+    font-size: 105%;
+}
+
+.blur {
+    filter: blur(10px);
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(23, 26, 23), rgba(255, 0, 0, 0));
+    z-index: 999;
+    /* Pastikan z-index lebih tinggi dari div yang di-blur */
+}
+
+main {
+    margin-bottom: 20px;
+}
+
+section .more {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+section .more h1 {
+    font-size: 25px;
+}
+
+section .more p {
+    width: 50vw;
+    font-size: 120%;
+}
+
+@media screen and (max-width: 680px) {
+    .header {
+        width: 100%;
+    }
+
+    section {
+        padding: 0px 10px;
+        margin-top: 20px;
+    }
+
+    section .more p {
+        font-size: 120%;
+        width: 100%;
+    }
+}
